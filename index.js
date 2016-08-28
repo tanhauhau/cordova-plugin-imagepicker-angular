@@ -13,9 +13,13 @@
         ///////////////////////
 
         function pickImage(opts){
+            if(angular.isUndefined(window.MultiImagePicker)){
+                console.error('\'window.MultiImagePicker\' is not available. See: https://github.com/tanhauhau/cordova-plugin-imagepicker');
+                return $q.reject();
+            }
             var defer = $q.defer();
-            opts = opts || {};
-            window.MultiImagePicker.getPictures(defer.resolve, defer.reject, opts);
+            var options = angular.isDefined(opts) ? opts : {};
+            window.MultiImagePicker.getPictures(defer.resolve, defer.reject, options);
             return defer.promise;
         }
     });

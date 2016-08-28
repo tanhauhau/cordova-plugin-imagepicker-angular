@@ -1,3 +1,44 @@
+## Install
+
+Bower
+
+```bash
+$ bower install --save ng-multi-image-picker
+```
+
+npm
+
+```bash
+$ npm install --save ng-multi-image-picker
+```
+
+## Example
+
+```javascript
+angular.module('app', ['com.lihau.mipicker'])
+.controller('MyController', function($scope, MultiImagePicker) {
+    $scope.onClick = function(){
+        MultiImagePicker.pickImage({
+            showCamera: false,
+            maxNum: 5,
+            selectedPath: [],
+            style: {
+                themeColor: '#005500',
+                textColor: '#ee1144'
+            }
+        })
+        .then(function(selectedImages){
+            console.log(selectedImages);
+        })
+        .catch(function(error){
+            console.error(error);
+        });
+    };
+});
+```
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2016 Tan Li Hau
