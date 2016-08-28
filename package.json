@@ -1,0 +1,8 @@
+{
+  "name": "ng-multi-image-picker",
+  "version": "1.0.0",
+  "description": "Angular service for cordova plugin multi-image-picker",
+  "main": "index.js",
+  "author": "Tan Li Hau",
+  "license": "MIT"
+}
