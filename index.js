@@ -22,5 +22,5 @@
             window.MultiImagePicker.getPictures(defer.resolve, defer.reject, options);
             return defer.promise;
         }
-    });
+    }
 })();
