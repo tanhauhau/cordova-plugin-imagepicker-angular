@@ -14,6 +14,8 @@ $ npm install --save ng-multi-image-picker
 
 ## Example
 
+my-controller.js
+
 ```javascript
 angular.module('app', ['com.lihau.mipicker'])
 .controller('MyController', function($scope, MultiImagePicker) {
@@ -35,6 +37,14 @@ angular.module('app', ['com.lihau.mipicker'])
         });
     };
 });
+```
+
+my-template.html
+
+```html
+<div ng-controller="MyController">
+    <img ng-repeat="img in selectedImages" ng-src="{{ img.image }}"/>
+</div>
 ```
 
 ## License
